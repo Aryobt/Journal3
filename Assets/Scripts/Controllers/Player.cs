@@ -9,25 +9,32 @@ public class Player : MonoBehaviour
     public Transform enemyTransform;
     public GameObject bombPrefab;
     public Transform bombsTransform;
+    [Header("Motion Properties")]
+    public float moveSpeed = 1.0f;
     private Vector3 velocity = new Vector3(1, 0, 0);
     private Vector3 velocity1 = new Vector3(0, 1, 0);
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        PlayerMovement();
+       
+    }
+    private void PlayerMovement()
         {
-            transform.position -= velocity;
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left * moveSpeed;
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position += velocity;
+            transform.position += Vector3.right * moveSpeed;
         }
-        if(Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.position += velocity1;
+            transform.position += Vector3.up * moveSpeed;
         }
-        if( Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform .position -= velocity1;
+            transform.position += Vector3.down * moveSpeed;
         }
     }
 
