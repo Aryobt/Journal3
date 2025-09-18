@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     //private Vector3 velocity1 = new Vector3(0, 1, 0);
     public float accelerationTime = 1f;
     public float maxSpeed = 1.0f;
+    public float decelerationTime = 0.5f;
 
     private Vector3 velocity = Vector3.zero;
     
@@ -43,6 +44,25 @@ public class Player : MonoBehaviour
         {
             velocity += accelerationTime * Time.deltaTime * Vector3.down;
         }
+
+        float deceleration = maxSpeed * decelerationTime;
+
+       if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+           velocity = decelerationTime * Time.deltaTime * Vector3.left;
+       }
+      //  if (Input.GetKeyUp(KeyCode.RightArrow))
+      //  {
+      //      velocity += accelerationTime * Time.deltaTime * Vector3.right;
+      //  }
+      //  if (Input.GetKeyUp(KeyCode.UpArrow))
+      // {
+      //     velocity += accelerationTime * Time.deltaTime * Vector3.up;
+      // }
+      // if (Input.GetKeyUp(KeyCode.DownArrow))
+      // {
+        //   velocity += accelerationTime * Time.deltaTime * Vector3.down;
+        //}
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
         transform.position += velocity * Time.deltaTime;
     }
