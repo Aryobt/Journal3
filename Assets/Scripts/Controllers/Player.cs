@@ -51,18 +51,18 @@ public class Player : MonoBehaviour
         {
            velocity = decelerationTime * Time.deltaTime * Vector3.left;
        }
-      //  if (Input.GetKeyUp(KeyCode.RightArrow))
-      //  {
-      //      velocity += accelerationTime * Time.deltaTime * Vector3.right;
-      //  }
-      //  if (Input.GetKeyUp(KeyCode.UpArrow))
-      // {
-      //     velocity += accelerationTime * Time.deltaTime * Vector3.up;
-      // }
-      // if (Input.GetKeyUp(KeyCode.DownArrow))
-      // {
-        //   velocity += accelerationTime * Time.deltaTime * Vector3.down;
-        //}
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+       {
+            velocity = accelerationTime * Time.deltaTime * Vector3.right;
+       }
+       if (Input.GetKeyUp(KeyCode.UpArrow))
+      {
+          velocity = accelerationTime * Time.deltaTime * Vector3.up;
+      }
+       if (Input.GetKeyUp(KeyCode.DownArrow))
+      {
+          velocity = accelerationTime * Time.deltaTime * Vector3.down;
+       }
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
         transform.position += velocity * Time.deltaTime;
     }
