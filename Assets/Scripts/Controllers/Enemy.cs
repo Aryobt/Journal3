@@ -12,14 +12,18 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        enemyMovement();
         transform.position = Vector3.MoveTowards(transform.position, enemyPosition, Speed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, enemyPosition) < 0.1f)
+        {
+            enemyMovement();
+        }
     }
 
     public void enemyMovement()
     {
         {
-
+            float randomX = Random.Range(minX, maxX);
+            enemyPosition = new Vector3(randomX, transform.position.y);
         }
     }
 }
