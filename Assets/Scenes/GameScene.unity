@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starTransforms: []
-  drawingTime: 0
+  drawingTime: 1
 --- !u!1001 &278059573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starTransforms: []
-  drawingTime: 0
+  drawingTime: 1
 --- !u!4 &1441953408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4504276444959460, guid: e3900e4d87ee29c43ad1d9098b51432c, type: 3}
