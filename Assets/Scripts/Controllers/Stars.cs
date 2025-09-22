@@ -5,10 +5,10 @@ using UnityEngine;
 public class Stars : MonoBehaviour
 {
     public List<Transform> starTransforms;
-    public float drawingTime = 0.5f;
+    public float drawingTime = 1f;
     float StartTime = 0f;
-    
 
+    float elapedTime;
 
     // Update is called once per frame
     void Update()
@@ -27,12 +27,29 @@ public class Stars : MonoBehaviour
         Vector3 Star3Pos = new Vector3(12, -1, 0);
         Vector3 Star4Pos = new Vector3(16, -4, 0);
 
-        float HowLong = StartTime / drawingTime;
+        elapedTime += Time.deltaTime;
+        if (elapedTime > drawingTime)
+        {
+            elapedTime = 0;
+        }
+        else
+        {
+            float stepValue = elapedTime / drawingTime;
 
-        Vector3 Star1To2 = Vector3.Lerp(Star1Pos, Star2Pos, HowLong);
+            Vector3 stepPosition = Vector3.Lerp(Star1Pos, Star2Pos, stepValue);
 
-        StartTime = (StartTime + 1) % (drawingTime + 1);
+            StartTime = (StartTime + 1) % (drawingTime + 1);
+            print(StartTime);
 
-        Debug.DrawLine(Star1Pos,Star2Pos,Color.white);
+            Debug.DrawLine(Star1Pos, Star2Pos, Color.white);
+
+        }
+
+
+        //float HowLong = StartTime / drawingTime;
+
+    
+
+        
     }
 }
