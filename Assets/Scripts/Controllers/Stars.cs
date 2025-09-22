@@ -11,7 +11,10 @@ public class Stars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      //  DrawConstellation();
+        DrawConstellation();
     }
-   // public void DrawConstellation();
+   public void DrawConstellation()
+    {
+
+    }
 }
