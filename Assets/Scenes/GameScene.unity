@@ -327,6 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 248867624}
   - component: {fileID: 248867623}
+  - component: {fileID: 248867625}
   m_Layer: 0
   m_Name: Star1
   m_TagString: Untagged
@@ -404,6 +405,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &248867625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248867622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e56a6fe5cb80984ea0622b663116246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starTransforms: []
+  drawingTime: 0
 --- !u!1001 &278059573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -679,6 +694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718321014}
   - component: {fileID: 718321013}
+  - component: {fileID: 718321015}
   m_Layer: 0
   m_Name: Star3
   m_TagString: Untagged
@@ -756,6 +772,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718321015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718321012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e56a6fe5cb80984ea0622b663116246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starTransforms: []
+  drawingTime: 0
 --- !u!1001 &742019646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -949,6 +979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891080756}
   - component: {fileID: 891080755}
+  - component: {fileID: 891080757}
   m_Layer: 0
   m_Name: Star4
   m_TagString: Untagged
@@ -1026,6 +1057,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &891080757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891080754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e56a6fe5cb80984ea0622b663116246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starTransforms: []
+  drawingTime: 0
 --- !u!1001 &925799359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1420,6 +1465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1418548708}
   - component: {fileID: 1418548707}
+  - component: {fileID: 1418548709}
   m_Layer: 0
   m_Name: Star2
   m_TagString: Untagged
@@ -1497,6 +1543,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1418548709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418548706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e56a6fe5cb80984ea0622b663116246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starTransforms: []
+  drawingTime: 0
 --- !u!4 &1441953408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4504276444959460, guid: e3900e4d87ee29c43ad1d9098b51432c, type: 3}
