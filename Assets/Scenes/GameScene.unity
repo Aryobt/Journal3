@@ -701,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &718321013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starTransforms: []
-  drawingTime: 0
+  drawingTime: 0.5
 --- !u!1001 &742019646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -986,7 +986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &891080755
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starTransforms: []
-  drawingTime: 0
+  drawingTime: 0.5
 --- !u!1001 &925799359
 PrefabInstance:
   m_ObjectHideFlags: 0

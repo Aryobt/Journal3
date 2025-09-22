@@ -42,6 +42,8 @@ public class Stars : MonoBehaviour
             print(StartTime);
 
             Debug.DrawLine(Star1Pos, Star2Pos, Color.white);
+            Debug.DrawLine(Star2Pos, Star3Pos, Color.white);
+            Debug.DrawLine(Star3Pos, Star4Pos, Color.white);
 
         }
 
