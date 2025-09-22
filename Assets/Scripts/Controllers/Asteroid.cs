@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class Asteroid : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class Asteroid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -20,6 +23,9 @@ public class Asteroid : MonoBehaviour
     }
     public void AsteroidMovement()
     {
+      //  if (Input.GetButton(Button))
+      // {
 
+      // }
     }
 }
