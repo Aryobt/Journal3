@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float Speed = 0.5f;
-    public float maxX = 5f;
-    public float minX = -5f;
+    public float maxX = 10f;
+    public float minX = -10f;
 
     private Vector3 enemyPosition;
 
