@@ -10,6 +10,8 @@ public class Asteroid : MonoBehaviour
     public float arrivalDistance = 1f;
     public float maxFloatDistance = 5f;
 
+    private float asteroidPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +25,9 @@ public class Asteroid : MonoBehaviour
     }
     public void AsteroidMovement()
     {
-      //  if (Input.GetButton(Button))
-      // {
-
-      // }
+       // if (Input.GetKey(KeyCode.E))
+       //{
+       //     transform.position = Vector3.MoveTowards(transform.position, asteroidPos, moveSpeed * Time.deltaTime);
+       // }
     }
 }
