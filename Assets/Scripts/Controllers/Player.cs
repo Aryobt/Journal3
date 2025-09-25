@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
         Vector3 center = transform.position;//
         for (int i = 0; i < points.Count - 1; i++)//
         {
-            Debug.DrawLine(center + points[i], center + points[i + 1]);//
+            Debug.DrawLine(center + points[i], center + points[i + 1],Color.green);//
         }
         Debug.DrawLine(center + points[points.Count -1], center + points[0],Color.green);//
     }
