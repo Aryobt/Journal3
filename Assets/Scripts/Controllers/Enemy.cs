@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public float maxX = 10f;
     public float minX = -10f;
 
-    private Vector3 enemyPosition;
+    public Vector3 enemyPosition;//made this public after week3
 
     private void Update()
     {

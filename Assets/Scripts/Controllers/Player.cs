@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -77,7 +78,7 @@ public class Player : MonoBehaviour
         transform.position += velocity * Time.deltaTime;
     }
 
-    private void RadarScan(float radius, int numberOfPoints)//
+    public void RadarScan(float radius, int numberOfPoints)//
     {
         float angleStep = 360f / numberOfPoints;//
         float radians = angleStep * Mathf.Deg2Rad;//
@@ -95,8 +96,9 @@ public class Player : MonoBehaviour
         Vector3 center = transform.position;//
         for (int i = 0; i < points.Count - 1; i++)//
         {
-            Debug.DrawLine(center + points[i], center + points[i + 1],Color.green);//
+            Debug.DrawLine(center + points[i], center + points[i + 1], Color.green);//
         }
-        Debug.DrawLine(center + points[points.Count -1], center + points[0],Color.green);//
+        Debug.DrawLine(center + points[points.Count - 1], center + points[0], Color.green);//
     }
+
 }
