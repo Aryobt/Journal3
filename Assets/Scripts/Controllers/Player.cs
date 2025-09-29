@@ -25,7 +25,9 @@ public class Player : MonoBehaviour
     public float radarRadius = 1f;
     public int numberOfPoints = 6;
 
-    public GameObject Powerups;//
+    public GameObject Enemy;
+
+    public GameObject PowerUp;//
 
     //public class Enemy targetScript;//wanted to see if I  could call it 
     void Start()
@@ -36,7 +38,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         PlayerMovement();
+
         RadarScan(radarRadius,numberOfPoints);
+
         SpawnPowerups(radarRadius,numberOfPoints);
 
 
@@ -105,29 +109,36 @@ public class Player : MonoBehaviour
             Debug.DrawLine(center + points[i], center + points[i + 1], Color.green);
         }
         Debug.DrawLine(center + points[points.Count - 1], center + points[0], Color.green);
-    }
-    public void SpawnPowerups(float radius, int numberOfPowerups)//
-    {
-        float angleStep = 360f / numberOfPoints;//
-        float radians = angleStep * Mathf.Deg2Rad;//
 
-        List<Vector3> powerUps = new List<Vector3>();//
+        //if (Enemy =< RadarScan) {//
+           // for (int i = 0; i < points.Count - 1; i++)
+           // {
+           //     Debug.DrawLine(center + points[i], center + points[i + 1], Color.red);
+            //}
+      //  }
+    }
+    public void SpawnPowerups(float radius, int numberOfPowerups)
+    {
+        float angleStep = 360f / numberOfPoints;
+        float radians = angleStep * Mathf.Deg2Rad;
+
+        List<Vector3> powerUps = new List<Vector3>();
 
 
         if (Input.GetKeyUp(KeyCode.P))
         {
-            Debug.Log("SpawnPowerUps");
+           // Instantiate(powerUps, );
             if (powerUps != null)
             {
-                for (int i = 0; i < numberOfPoints; i++)//
+                for (int i = 0; i < numberOfPoints; i++)
                 {
-                    float adjustment = radians * i;//
-                    Vector3 point = new Vector3(Mathf.Cos(radians + adjustment), Mathf.Sin(radians + adjustment)) * radius;//
+                    float adjustment = radians * i;
+                    Vector3 point = new Vector3(Mathf.Cos(radians + adjustment), Mathf.Sin(radians + adjustment)) * radius;
 
-                    powerUps.Add(point);//
+                    powerUps.Add(point);
 
                 }
-                Vector3 center = transform.position;//
+                Vector3 center = transform.position;
             }
 
         }
