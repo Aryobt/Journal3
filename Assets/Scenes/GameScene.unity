@@ -969,6 +969,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788539456}
   m_CullTransparentMesh: 1
+--- !u!4 &844289051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 596075294928896946, guid: c3b47d100d80f96419fd12c13303c43e, type: 3}
+  m_PrefabInstance: {fileID: 1838060354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &847310719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1409900303673908, guid: e3900e4d87ee29c43ad1d9098b51432c, type: 3}
@@ -1914,20 +1919,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8382019928816532762, guid: c3b47d100d80f96419fd12c13303c43e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 378631089131628727, guid: c3b47d100d80f96419fd12c13303c43e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2001018883}
+      addedObject: {fileID: 2001018881}
   m_SourcePrefab: {fileID: 100100000, guid: c3b47d100d80f96419fd12c13303c43e, type: 3}
 --- !u!1 &2001018879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 378631089131628727, guid: c3b47d100d80f96419fd12c13303c43e, type: 3}
   m_PrefabInstance: {fileID: 1838060354}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2001018883
+--- !u!114 &2001018881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1939,8 +1945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3d325f25130d440a55690dffa01e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetTransform: {fileID: 0}
-  orbitalSpeed: 5
+  planetTransform: {fileID: 844289051}
+  orbitalSpeed: 1
+  radius: 2
 --- !u!1001 &2030902519
 PrefabInstance:
   m_ObjectHideFlags: 0
