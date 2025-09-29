@@ -22,10 +22,10 @@ public class Moon : MonoBehaviour
         angle += orbitalSpeed * Time.deltaTime;
         //transform.Rotate(new Vector3(0, 0, orbitalSpeed) * Time.deltaTime);
         float x = Mathf.Cos(angle) * radius;
-        float z = Mathf.Sin(angle) * radius;
+        float y = Mathf.Sin(angle) * radius;
 
        
-        transform.position = planetTransform.position + new Vector3(x, 0, z);
+        transform.position = planetTransform.position + new Vector3(x, y, 0);
         
     }
    // public void OrbitalMotion(float radius, int MoonPoints)
