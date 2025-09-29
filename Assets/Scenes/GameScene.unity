@@ -1920,14 +1920,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 378631089131628727, guid: c3b47d100d80f96419fd12c13303c43e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2001018881}
+      addedObject: {fileID: 2001018883}
   m_SourcePrefab: {fileID: 100100000, guid: c3b47d100d80f96419fd12c13303c43e, type: 3}
 --- !u!1 &2001018879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 378631089131628727, guid: c3b47d100d80f96419fd12c13303c43e, type: 3}
   m_PrefabInstance: {fileID: 1838060354}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2001018881
+--- !u!114 &2001018883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetTransform: {fileID: 0}
-  orbitalSpeed: 1
+  orbitalSpeed: 5
 --- !u!1001 &2030902519
 PrefabInstance:
   m_ObjectHideFlags: 0
