@@ -111,10 +111,10 @@ public class Player : MonoBehaviour
         Debug.DrawLine(center + points[points.Count - 1], center + points[0], Color.green);
 
         //if (Enemy =< RadarScan) {//
-           // for (int i = 0; i < points.Count - 1; i++)
-           // {
-           //     Debug.DrawLine(center + points[i], center + points[i + 1], Color.red);
-            //}
+         //  for (int i = 0; i < points.Count - 1; i++)
+         //  {
+         //      Debug.DrawLine(center + points[i], center + points[i + 1], Color.red);
+         //   }
       //  }
     }
     public void SpawnPowerups(float radius, int numberOfPowerups)
@@ -127,7 +127,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.P))
         {
-           // Instantiate(powerUps, );
+            //Instantiate(powerUps, );
             if (powerUps != null)
             {
                 for (int i = 0; i < numberOfPoints; i++)
