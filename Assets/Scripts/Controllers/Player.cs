@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class Player : MonoBehaviour
 {
@@ -27,7 +29,11 @@ public class Player : MonoBehaviour
 
     public GameObject Enemy;
 
-    public GameObject PowerUp;//
+    public GameObject PowerUp;
+
+    public GameObject Rocket;
+
+    public float RocketSpeed = 5f;
 
     //public class Enemy targetScript;//wanted to see if I  could call it 
     void Start()
@@ -39,11 +45,11 @@ public class Player : MonoBehaviour
     {
         PlayerMovement();
 
-        RadarScan(radarRadius,numberOfPoints);
+        RadarScan(radarRadius, numberOfPoints);
 
-        SpawnPowerups(radarRadius,numberOfPoints);
+        SpawnPowerups(radarRadius, numberOfPoints);
 
-
+        DrawLineToMouse();
     }
     private void PlayerMovement()
     {
@@ -111,11 +117,11 @@ public class Player : MonoBehaviour
         Debug.DrawLine(center + points[points.Count - 1], center + points[0], Color.green);
 
         //if (Enemy =< RadarScan) {//
-         //  for (int i = 0; i < points.Count - 1; i++)
-         //  {
-         //      Debug.DrawLine(center + points[i], center + points[i + 1], Color.red);
-         //   }
-      //  }
+        //  for (int i = 0; i < points.Count - 1; i++)
+        //  {
+        //      Debug.DrawLine(center + points[i], center + points[i + 1], Color.red);
+        //   }
+        //  }
     }
     public void SpawnPowerups(float radius, int numberOfPowerups)
     {
@@ -141,6 +147,44 @@ public class Player : MonoBehaviour
                 Vector3 center = transform.position;
             }
 
+        }
+    }
+
+
+    private void DrawLineToMouse()
+    {
+        Vector3 playerPosition = transform.position;
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = playerPosition.z;
+
+        Debug.DrawLine(playerPosition, mousePosition, Color.red);
+    }
+
+
+    private void ShootTowardMouse()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 playerPosition = transform.position;
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = playerPosition.z;
+
+            Vector3 direction = (mousePosition - playerPosition).normalized;
+
+            GameObject rocketInstance = Instantiate(Rocket, playerPosition, Rocket.transform.rotation);
+        }
+    }
+
+
+    public class RocketMovement
+    {
+        private Vector3 moveDirection;
+        private float speed;
+
+        public void Initialize(Vector3 direction, float moveSpeed)
+        {
+            moveDirection = direction;
+            speed = moveSpeed;
         }
     }
 }
