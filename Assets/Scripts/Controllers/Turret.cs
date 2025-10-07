@@ -13,26 +13,34 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 directionToTarget = (target.position - transform.forward).normalized;
+        Vector2 directionToTarget = (target.position - transform.position).normalized;
 
-        //float dot = Vector3.Dot(transform.up, directionToTarget);
-
-        float directionAngle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
-
-        float upAngle = Mathf.Atan2(transform.up.y, transform.up.x) * Mathf.Rad2Deg;
+        float upAngle = CaculateDegAngleFromVector(transform.up);
+        float directionAngle = CaculateDegAngleFromVector(directionToTarget);
 
         float deltaAngle = Mathf.DeltaAngle(upAngle, directionAngle);
-
         float sign = Mathf.Sign(deltaAngle);
 
-        if (Mathf.Abs(deltaAngle) < 0.1f) return;
+        float angleStep = angularSpeed * sign * Time.deltaTime;
 
-        transform.Rotate(0, 0, angularSpeed * Time.deltaTime * sign);
+        transform.Rotate(0, 0, angleStep);
+
+        if (Mathf.Abs(angleStep) < (deltaAngle))
+        transform.Rotate(0, 0, angleStep);
+        else
+            transform.Rotate(0,0,deltaAngle);
+
+            float dot = Vector3.Dot(transform.up, directionToTarget);
 
         Debug.Log($"<color=yellow><size=16>{deltaAngle}</size></color>.");
 
         Debug.DrawLine(transform.position, transform.position + transform.up, Color.green);
 
-        Debug.DrawLine(transform.position, transform.position + directionToTarget, Color.magenta);
+        Debug.DrawLine(transform.position, transform.position + (Vector3) directionToTarget, Color.magenta);
+    }
+
+    private float CaculateDegAngleFromVector(Vector2 vec)
+    {
+        return Mathf.Atan2(vec.y,vec.x) * Mathf.Rad2Deg;
     }
 }
