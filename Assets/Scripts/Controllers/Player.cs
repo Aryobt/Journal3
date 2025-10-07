@@ -180,11 +180,5 @@ public class Player : MonoBehaviour
     {
         private Vector3 moveDirection;
         private float speed;
-
-        public void Initialize(Vector3 direction, float moveSpeed)
-        {
-            moveDirection = direction;
-            speed = moveSpeed;
-        }
     }
 }
