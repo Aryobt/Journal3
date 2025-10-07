@@ -49,7 +49,9 @@ public class Player : MonoBehaviour
 
         SpawnPowerups(radarRadius, numberOfPoints);
 
+        ///preposal1
         DrawLineToMouse();
+        ///
     }
     private void PlayerMovement()
     {
@@ -151,6 +153,7 @@ public class Player : MonoBehaviour
     }
 
 
+/// preposal1
     private void DrawLineToMouse()
     {
         Vector3 playerPosition = transform.position;
@@ -180,5 +183,7 @@ public class Player : MonoBehaviour
     {
         private Vector3 moveDirection;
         private float speed;
+
     }
+    ///
 }
