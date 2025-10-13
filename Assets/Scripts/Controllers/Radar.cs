@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Radar : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Radar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector2 directionToTarget = (enemy.position - transform.position).normalized;
+
+      
     }
 }
