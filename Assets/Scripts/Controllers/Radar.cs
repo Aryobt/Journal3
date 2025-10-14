@@ -5,7 +5,13 @@ public class Radar : MonoBehaviour
 {
     public Transform enemy;
     public float rotateSpeed = 60f;
-    public GameObject Player;//
+
+    public Transform playerTransform;
+
+    public float RotationAroundPlayerSpeed;
+    public float radius;
+
+    private float angle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +34,14 @@ public class Radar : MonoBehaviour
         transform.Rotate(0, 0, angleStep);
 
         float Alighn = Vector3.Dot(transform.up, directionToEnemy);
+
+        angle += RotationAroundPlayerSpeed * Time.deltaTime;
+      
+        float x = Mathf.Cos(angle) * radius;
+        float y = Mathf.Sin(angle) * radius;
+
+
+        transform.position = playerTransform.position + new Vector3(x, y, 0);
     }
 
     private float CaculateAngleFromVector(Vector2 vec)
