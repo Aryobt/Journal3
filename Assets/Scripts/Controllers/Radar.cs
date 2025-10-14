@@ -5,6 +5,7 @@ public class Radar : MonoBehaviour
 {
     public Transform enemy;
     public float rotateSpeed = 60f;
+    public GameObject Player;//
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,7 +27,7 @@ public class Radar : MonoBehaviour
 
         transform.Rotate(0, 0, angleStep);
 
-        float dot = Vector3.Dot(transform.up, directionToEnemy);
+        float Alighn = Vector3.Dot(transform.up, directionToEnemy);
     }
 
     private float CaculateAngleFromVector(Vector2 vec)

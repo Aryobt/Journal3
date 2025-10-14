@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 572375975}
   - component: {fileID: 572375977}
   m_Layer: 0
-  m_Name: 1000_F_702496948_WcD5y0wFm6mgUru3AfgBFHccagnLFjxK-removebg-preview_0
+  m_Name: Radar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,6 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1441953408}
   rotateSpeed: 60
+  Player: {fileID: 0}
 --- !u!1001 &578339795
 PrefabInstance:
   m_ObjectHideFlags: 0
