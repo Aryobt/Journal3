@@ -14,8 +14,23 @@ public class Radar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 directionToTarget = (enemy.position - transform.position).normalized;
+        Vector2 directionToEnemy = (enemy.position - transform.position).normalized;
 
-      
+        float TopAngle = CaculateAngleFromVector(transform.up);
+        float directionRadar = CaculateAngleFromVector(directionToEnemy);
+
+        float deltaAngle = Mathf.DeltaAngle(TopAngle, directionRadar);
+        float sign = Mathf.Sign(deltaAngle);
+
+        float angleStep = rotateSpeed * sign * Time.deltaTime;
+
+        transform.Rotate(0, 0, angleStep);
+
+        float dot = Vector3.Dot(transform.up, directionToEnemy);
+    }
+
+    private float CaculateAngleFromVector(Vector2 vec)
+    {
+        return Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
     }
 }
