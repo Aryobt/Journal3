@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
         ///preposal1
         DrawLineToMouse();
         ///
+        ShootTowardMouse();
     }
     private void PlayerMovement()
     {
@@ -164,7 +165,7 @@ public class Player : MonoBehaviour
     }
 
 
-    private void ShootTowardMouse()
+    public void ShootTowardMouse()
     {
         if (Input.GetMouseButton(0))
         {
@@ -174,7 +175,7 @@ public class Player : MonoBehaviour
 
             Vector3 direction = (mousePosition - playerPosition).normalized;
 
-            GameObject rocketInstance = Instantiate(Rocket, playerPosition, Rocket.transform.rotation);
+            Instantiate(Rocket, playerPosition, Rocket.transform.rotation);
         }
     }
 
