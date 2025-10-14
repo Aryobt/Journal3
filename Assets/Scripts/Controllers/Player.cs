@@ -167,7 +167,7 @@ public class Player : MonoBehaviour
 
     public void ShootTowardMouse()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 playerPosition = transform.position;
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -175,7 +175,10 @@ public class Player : MonoBehaviour
 
             Vector3 direction = (mousePosition - playerPosition).normalized;
 
-            Instantiate(Rocket, playerPosition, Rocket.transform.rotation);
+            GameObject GO = Instantiate(Rocket, playerPosition, Rocket.transform.rotation);
+
+            Destroy(GO,3f);
+
         }
     }
 
